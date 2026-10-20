@@ -84,7 +84,7 @@ Si las tres condiciones se cumplen simultáneamente, el sistema considera que el
 
 ## Validación de Impacto ODS
 
-**ODS Seleccionado:** ODS 6: Agua Limpia y Saneamiento.
+**ODS Seleccionado:** ODS 6: Agua Limpia y Saneamiento / ODS 3 Salud y Bienestar.
 
 **Meta específica del proyecto:** Entregar un diagnóstico previo en terreno que permita determinar si una fuente natural de agua reúne las condiciones mínimas necesarias para que una pastilla potabilizadora funcione correctamente. De manera complementaria, el proyecto se relaciona con el ODS 3: Salud y Bienestar, al buscar prevenir enfermedades gastrointestinales y cuadros de deshidratación.
 
