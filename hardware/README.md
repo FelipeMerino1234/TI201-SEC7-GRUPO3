@@ -49,5 +49,5 @@ El consumo es
 
 | Problema | Posible Causa | Solución |
 |----------|---------------|----------|
-| [El traspaso del agua en los sensores] | [El agua sube debido al principio de Arquímedes y al desplazamiento de volumen] | [Impearmibilizar la tapa para evitar el traspaso de agua] |
+| El traspaso del agua en los sensores | El agua sube debido al principio de Arquímedes y al desplazamiento de volumen |Impearmibilizar la tapa para evitar el traspaso de agua |
 | [] | [Causa] | [Solución] |
