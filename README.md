@@ -1,20 +1,23 @@
 ### Información del Equipo
 - **Integrantes:**
-  - Nombre 1 - Rol 1
-  - Nombre 2 - Rol 2
-  - Nombre 3 - Rol 3
-  - Nombre 4 - Rol 4
+  - Corvalan Baez, Vicente Benjamin
+  - Eltit Camilla, Benjamin
+  - Merino Romero, Felipe Ignacio
+  - Rosas Astorga, Nicolas Ignacio
+  - Sandoval Riquelme, Sofia Victoria
+
   
-- **ODS Seleccionado:** [Número y nombre]
-- **Problema a resolver:** [Descripción breve]
+- **ODS Seleccionado:** ODS 6 Agua limpia y saneamiento / ODS 3 Salud y Bienestar
+- **Problema a resolver:** El riesgo de contraer Enfermedades Transmitidas por Alimentos (ETA) en senderos y zonas agrestes al intentar purificar agua de fuentes naturales sin saber si las condiciones físicas (temperatura, turbidez) permiten que los químicos actúen de forma efectiva.
 
 ### Descripción del Proyecto
-[Breve descripción de la solución IoT propuesta]
+El Monitor de calidad del agua es un prototipo basado en Arduino diseñado para evaluar la viabilidad de potabilización de fuentes de agua naturales. A través de sensores de temperatura, turbidez y sólidos totales disueltos (TDS), el dispositivo monitorea el estado del agua y utiliza un sistema binario de alertas LED (verde y rojo) para indicar al usuario si el agua cumple con los parámetros técnicos necesarios para ser tratada de forma segura con pastillas purificadoras estandarizadas (AquaTabs).
+
 
 ### Estado del Proyecto
-- **Versión actual:** v3.0
-- **Última actualización:** [Fecha]
-- **Estado:** Prototipo final
+- **Versión actual:** v2.0
+- **Última actualización:** 25/10/26
+- **Estado:** Prototipo 
 
 ---
 
