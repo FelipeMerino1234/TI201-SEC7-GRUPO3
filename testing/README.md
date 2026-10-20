@@ -23,7 +23,7 @@ Datos cuantitativos recolectados
 ### Grupo Objetivo
 - **Perfil de usuarios:** Excursionistas y mochileros que realizan actividades de senderismo y trekking.
 - **Cantidad mínima:** Indefinida
-- **Ubicación:** Rutas de trekking y zonas de media y alta montaña de la Región Metropolitana, donde los usuarios necesitan abastecerse de agua desde fuentes naturales. Actividad Diseño 16-10-2026
+- **Ubicación:** Rutas de trekking y zonas de media y alta montaña de la Región Metropolitana, donde los usuarios necesitan abastecerse de agua desde fuentes naturales.
 
 ### Protocolo de Testing
 1. **Briefing** (5 min)
