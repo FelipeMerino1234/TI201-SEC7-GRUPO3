@@ -21,9 +21,9 @@ Datos cuantitativos recolectados
 ## Metodología de Testing
 
 ### Grupo Objetivo
-- **Perfil de usuarios:** [Descripción]
-- **Cantidad mínima:** 5 usuarios
-- **Ubicación:** [Contexto real de uso]
+- **Perfil de usuarios:** Senderistas
+- **Cantidad mínima:** Indefinida
+- **Ubicación:** Durante expediciones en lugares aislados 
 
 ### Protocolo de Testing
 1. **Briefing** (5 min)
