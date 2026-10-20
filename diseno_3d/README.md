@@ -31,13 +31,13 @@ Planos técnicos con cotas
 
 ## Especificaciones
 
-**Software:** Autodesk Fusion 360  
+**Software:** Tinkercard 
 **Unidades:** Milímetros (mm)  
 **Escala:** 1:1 (dimensiones reales)
 
 **Dimensiones externas:** [X mm × Y mm × Z mm]  
 **Peso estimado:** [XXX gramos]  
-**Material:** [PLA, ABS, PETG, etc.]
+**Material:** PLA
 
 ---
 
