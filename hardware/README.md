@@ -36,8 +36,10 @@ Fotografías de alta resolución del prototipo ensamblado
 
 ## Especificaciones Técnicas
 
-**Alimentación:** [Voltaje y corriente]  
+**Alimentación:** [Voltaje y corriente] 
+El voltaje es de 5 V
 **Consumo:** [Watts/mA]  
+El consumo es
 **Dimensiones:** [mm x mm x mm]  
 **Peso:** [gramos]
 
@@ -47,5 +49,5 @@ Fotografías de alta resolución del prototipo ensamblado
 
 | Problema | Posible Causa | Solución |
 |----------|---------------|----------|
-| [Problema 1] | [Causa] | [Solución] |
-| [Problema 2] | [Causa] | [Solución] |
+| [El traspaso del agua en los sensores] | [El agua sube debido al principio de Arquímedes y al desplazamiento de volumen] | [Impearmibilizar la tapa para evitar el traspaso de agua] |
+| [] | [Causa] | [Solución] |
