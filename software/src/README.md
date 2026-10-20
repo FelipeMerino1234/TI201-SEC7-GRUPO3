@@ -24,9 +24,3 @@ Archivo principal del proyecto desarrollado en Arduino para el sistema de monito
 
 
 
-### Monitor Serial
-- Baudrate: 115200
-- Mensajes informativos con prefijos:
-  - `[INFO]` - Información general
-  - `[ERROR]` - Errores
-  - `[DEBUG]` - Debug
