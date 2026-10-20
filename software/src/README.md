@@ -2,7 +2,7 @@
 
 ## Archivos Principales
 
-### [`main.ino`](src/main.ino)
+### [`main.ino`](main.ino)
 Archivo principal del proyecto desarrollado en Arduino para el sistema de monitoreo de calidad de agua.
 
 **Estructura:**
