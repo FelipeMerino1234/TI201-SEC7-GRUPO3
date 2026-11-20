@@ -2,31 +2,31 @@
 
 ## Contenido
 
-Esta carpeta contiene todo el código y documentación del software del proyecto **Monitor de Calidad del Agua (Sistema E.V.A.)**[span_10](start_span)[span_10](end_span).
+Esta carpeta contiene todo el código y documentación del software del proyecto **Monitor de Calidad del Agua (Sistema E.V.A.)**.
 
-### 📁 Carpetas
+### Carpetas
 
 * `src/`  
-  Código fuente del proyecto (`.ino` para Arduino Uno y script `.py` de enlace serial hacia ThingSpeak)[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span).
+  Código fuente del proyecto (`.ino` para Arduino Uno y script `.py` de enlace serial hacia ThingSpeak).
 
 * `librerias/`  
-  Librerías adicionales necesarias para el sensor digital de temperatura (`OneWire` y `DallasTemperature`)[span_13](start_span)[span_13](end_span).
+  Librerías adicionales necesarias para el sensor digital de temperatura (`OneWire` y `DallasTemperature`).
 
 * `docs/`  
-  Documentación técnica del software, lógica de calibración y arquitectura de datos[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span).
+  Documentación técnica del software, lógica de calibración y arquitectura de datos.
 
 ---
 
 ## Stack Tecnológico
 
-* **Plataforma:** Arduino Uno (ATmega328P) + PC Gateway (Python 3)[span_17](start_span)[span_17](end_span)[span_18](start_span)[span_18](end_span)
-* **Lenguaje:** C/C++ (Firmware embebido) y Python (Transmisión IoT)[span_19](start_span)[span_19](end_span)
-* **IDE:** Arduino IDE 2.x[span_20](start_span)[span_20](end_span)
+* **Plataforma:** Arduino Uno (ATmega328P) + PC Gateway (Python 3)
+* **Lenguaje:** C/C++ (Firmware embebido) y Python (Transmisión IoT)
+* **IDE:** Arduino IDE 2.x
 * **Librerías principales:**
-  * `OneWire.h` - Protocolo de comunicación digital 1-Wire (Arduino)[span_21](start_span)[span_21](end_span)[span_22](start_span)[span_22](end_span)
-  * `DallasTemperature.h` - Lectura y conversión de temperatura del sensor DS18B20 (Arduino)[span_23](start_span)[span_23](end_span)
-  * `pyserial` - Lectura de tramas de datos desde el puerto serial USB (Python)[span_24](start_span)[span_24](end_span)
-  * `requests` - Envío de mediciones mediante peticiones HTTP a la API de ThingSpeak (Python)[span_25](start_span)[span_25](end_span)
+  * `OneWire.h` - Protocolo de comunicación digital 1-Wire (Arduino)
+  * `DallasTemperature.h` - Lectura y conversión de temperatura del sensor DS18B20 (Arduino)
+  * `pyserial` - Lectura de tramas de datos desde el puerto serial USB (Python)
+  * `requests` - Envío de mediciones mediante peticiones HTTP a la API de ThingSpeak (Python)
 
 ---
 
@@ -83,36 +83,22 @@ Para ajustar pines, constantes de calibración o la conexión hacia ThingSpeak, 
 
 ## Arquitectura del Software
 
-El sistema opera bajo una arquitectura de flujo continuo en 4 etapas que combina procesamiento local autónomo en terreno y respaldo en la nube al conectar el equipo vía USB[span_26](start_span)[span_26](end_span)[span_27](start_span)[span_27](end_span):
+El sistema opera bajo una arquitectura de flujo continuo en 4 etapas que combina procesamiento local autónomo en terreno y respaldo en la nube al conectar el equipo vía USB:
 
 ```text
 [Sensores: DS18B20, TDS, TSW-20M] 
-        │
-        ▼ (Lectura ADC / OneWire)
-[Arduino Uno: Promedio 10 muestras + Evaluación Umbrales] ──► [LED Verde / LED Rojo]
-        │
-        ▼ (Puerto Serial USB - 9600 baudios)
+        |
+        v (Lectura ADC / OneWire)
+[Arduino Uno: Promedio 10 muestras + Evaluación Umbrales] --> [LED Verde / LED Rojo]
+        |
+        v (Puerto Serial USB - 9600 baudios)
 [PC Gateway: Script Python (pyserial + requests)]
-        │
-        ▼ (HTTP API cada 15 segundos)
+        |
+        v (HTTP API cada 15 segundos)
 [Nube ThingSpeak: Dashboard, Gauges e Historial CSV]
 ```
 
 ### Módulos Principales
 
-1. **Inicialización** - Configuración de comunicación serial (`9600 baudios`), bus `OneWire` del sensor de temperatura, pines de salida para LEDs (`D8`, `D9`) e interruptor en modo `INPUT_PULLUP` (`D3`)[span_28](start_span)[span_28](end_span).
-2. **Lectura de Sensores** - Captura continua en tiempo real de temperatura (°C), voltaje de sólidos disueltos (`V_TDS` en `A0`) y voltaje de turbidez (`V_TURB` en `A1`)[span_29](start_span)[span_29](end_span)[span_30](start_span)[span_30](end_span)[span_31](start_span)[span_31](end_span).
-3. **Procesamiento** - Aplicación de ecuaciones de calibración a unidades físicas (`ppm` y `NTU`), cálculo de promedio móvil de 10 lecturas consecutivas y evaluación lógica simultánea (`Temp > 10 °C`, `Turbidez < 5 NTU`, `TDS < 500 ppm`)[span_32](start_span)[span_32](end_span)[span_33](start_span)[span_33](end_span)[span_34](start_span)[span_34](end_span).
-4. **Actuación** - Control binario inmediato mediante indicadores luminosos: encendido de `LED_VERDE` (`D8`) si todos los parámetros son seguros, o `LED_ROJO` (`D9`) si al menos uno excede el límite[span_35](start_span)[span_35](end_span)[span_36](start_span)[span_36](end_span).
-5. **Comunicación** - Transmisión de tramas por puerto serie USB hacia un script gateway en Python que publica las mediciones en **ThingSpeak**[span_37](start_span)[span_37](end_span).
-
----
-
-## API / Endpoints (Integración Cloud ThingSpeak)
-
-Dado que el microcontrolador **Arduino Uno** no posee módulo WiFi nativo, la conectividad web se realiza mediante un script gateway en **Python** conectado a la API REST de **ThingSpeak** (Canal público ID: `3588837`)[span_38](start_span)[span_38](end_span)[span_39](start_span)[span_39](end_span):
-
-| Endpoint | Método | Descripción |
-| :--- | :--- | :--- |
-| `https://api.thingspeak.com/update` | `GET` / `POST` | Envía cada 15 segundos los valores de Temperatura (`field1`), TDS (`field2`), Turbidez (`field3`) y estado de aptitud (`field4`) usando la `Write API Key`[span_40](start_span)[span_40](end_span)[span_41](start_span)[span_41](end_span). |
-| `https://thingspeak.mathworks.com/channels/3588837` | `GET` | Acceso público al dashboard en tiempo real con indicadores de umbral (*gauges*), alertas virtuales y descarga de historial[span_42](start_span)[span_42](end_span). |
+1. **Inicialización** - Configuración de comunicación serial (`9600 baudios`), bus `OneWire` del sensor de temperatura, pines de salida para LEDs (`D8`, `D9`) e interruptor en modo `INPUT_PULLUP` (`D3`).
+2. **Lectura de Sensores** - Captura continua en tiempo real
