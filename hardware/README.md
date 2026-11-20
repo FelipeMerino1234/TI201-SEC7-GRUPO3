@@ -1,4 +1,4 @@
-Hardware - Documentación
+# Hardware - Documentación
 
 ## Contenido
 
@@ -7,13 +7,13 @@ Esta carpeta contiene toda la documentación técnica del hardware del proyecto 
 ### 📁 Carpetas
 
 * `esquemas/`  
-  Diagramas de circuitos y esquemáticos del sistema (conexiones físicas y simulación en Wokwi).
+  Diagramas de circuitos y esquemáticos formales del sistema exportados desde EasyEDA (`esquematico.pdf`) y simulación en Wokwi.
 
 * `bom/`  
-  Bill of Materials (Lista completa de materiales y componentes electrónicos).
+  Bill of Materials (Lista completa de materiales, especificaciones técnicas y costos asociados en CLP).
 
 * `fotos/`  
-  Fotografías de alta resolución del prototipo ensamblado y pruebas en terreno/laboratorio.
+  Fotografías de alta resolución del prototipo físico ensamblado (vistas superior, inferior y lateral) y pruebas en laboratorio.
 
 ---
 
@@ -21,32 +21,57 @@ Esta carpeta contiene toda la documentación técnica del hardware del proyecto 
 
 ### Componentes Principales
 
-1. **Placa Arduino Uno** - Microcontrolador encargado de recibir las señales de los sensores, calcular el promedio móvil de 10 lecturas y controlar las alertas visuales.
-2. **Sensor de Temperatura Sumergible (DS18B20)** - Mide la temperatura del agua en °C (conectado al pin digital `2` vía protocolo OneWire) para verificar que no ralentice el efecto químico de la pastilla potabilizadora.
-3. **Sensor de Sólidos Disueltos Totales (TDS V1.0)** - Mide la concentración de sales, minerales y metales disueltos en ppm (conectado al pin analógico `A0`).
-4. **Sensor de Turbidez Óptico (TSW-20M)** - Evalúa mediante un haz de luz la cantidad de partículas suspendidas en NTU (conectado al pin analógico `A1`).
-5. **Indicadores LED (Verde y Rojo) y Resistencias** - Sistema de respuesta binaria inmediata: LED Verde (pin digital `8`) indica agua apta para pastilla y LED Rojo (pin digital `9`) alerta que al menos un parámetro está fuera de rango.
-6. **Interruptor SPDT y Sistema de Alimentación (Batería 18650 + Módulo de Carga)** - Controla el encendido, pausa del sistema (pin digital `3` con `INPUT_PULLUP`) y provee energía autónoma en terreno.
+1. **Placa Arduino Uno (R3)** - Microcontrolador ATmega328P (5 V) encargado de procesar las señales de los sensores, calcular el promedio móvil de 10 lecturas y controlar las alertas visuales.
+2. **Sensor de Temperatura Sumergible (DS18B20)** - Sensor digital 1-Wire en acero inoxidable (-55 °C a 125 °C) conectado al pin digital `D2` con resistencia pull-up de `4,7 kΩ` para medir temperatura en °C.
+3. **Sensor de Sólidos Disueltos Totales (TDS V1.0)** - Módulo con sonda impermeable (0–1000 ppm) conectado al pin analógico `A0` para medir sales y minerales disueltos en ppm.
+4. **Sensor de Turbidez Óptico (TSW-20M)** - Módulo óptico conectado al pin analógico `A1` para evaluar partículas suspendidas en NTU mediante un haz de luz.
+5. **Indicadores LED (Verde y Rojo) y Resistencias** - Diodos LED de 5 mm con resistencias limitadoras de `220 Ω`: LED Verde (pin `D8`) indica agua apta para pastilla AquaTabs; LED Rojo (pin `D9`) alerta que al menos un parámetro está fuera de rango.
+6. **Interruptor SPDT y Sistema de Alimentación (Batería 18650 + TP4056)** - Interruptor deslizante de 3 pines (pin `D3` con `INPUT_PULLUP`) y batería recargable Li-ion 18650 (3,7 V) con módulo cargador TP4056 (5 V, 1 A).
 
 ### Pasos de Ensamblaje
 
-1. **Montaje del circuito base:** Conectar la protoboard, las resistencias de protección y los LEDs (Verde al pin `8` y Rojo al pin `9`), junto con el interruptor SPDT al pin `3` y GND de la placa Arduino Uno.
-2. **Conexión de sensores:** Conectar el sensor de temperatura DS18B20 al pin digital `2`, el sensor TDS al pin analógico `A0` y el sensor de turbidez TSW-20M al pin analógico `A1`, alimentándolos desde los rieles de 5 V y GND.
-3. **Integración en el encapsulado 3D:** Ubicar la electrónica de control (Arduino Uno, protoboard, batería 18650 y módulo de carga) en la mitad superior hermética de la carcasa de PLA, pasando únicamente los cables de los tres sensores hacia la mitad inferior (faldón protector) a través de la ranura interna sellada.
+1. **Montaje del circuito base:** Conectar la protoboard de 400 puntos, las dos resistencias limitadoras de `220 Ω` para los LEDs (Verde al pin `D8` y Rojo al pin `D9`), la resistencia pull-up de `4,7 kΩ` para el sensor DS18B20 y el interruptor SPDT al pin `D3` y GND.
+2. **Conexión de sensores:** Conectar el sensor de temperatura DS18B20 al pin digital `D2`, el sensor TDS V1.0 al pin analógico `A0` y el sensor de turbidez TSW-20M al pin analógico `A1`, alimentándolos desde el riel de 5 V y GND común.
+3. **Integración en el encapsulado 3D (Diseño para la Reparación):** Ubicar la electrónica de control (Arduino Uno, protoboard, batería 18650 y módulo TP4056) en la cámara superior seca de la carcasa de PLA (cerrada mediante tapa superior removible con pestaña, sin adhesivos permanentes), pasando los cables de los tres sensores hacia el faldón inferior a través de la ranura interna sellada.
 
 ### Precauciones
 
-* ⚠️ **Impermeabilización de la sección superior:** Verificar que la tapa superior con sello de goma y la ranura interna de paso de cables estén completamente selladas antes de sumergir el equipo para evitar cortocircuitos en el Arduino o la batería.
-* ⚠️ **Despeje del orificio de ventilación lateral:** Asegurarse de que el conducto de ventilación ubicado en la parte alta del faldón inferior no esté obstruido, permitiendo que escape el aire al sumergir el dispositivo y evitando burbujas estancadas sobre los sensores.
+* ⚠️ **Impermeabilización y sellado de cámara superior:** Asegurar el cierre de la tapa superior removible y el sellado del paso de cables (reforzado con cinta americana resistente a la humedad) antes de sumergir el equipo para evitar cortocircuitos.
+* ⚠️ **Despeje del orificio de ventilación lateral:** Verificar que el conducto de ventilación ubicado en la parte alta del faldón inferior no esté obstruido, permitiendo el escape del aire al sumergir el dispositivo y evitando burbujas estancadas sobre los sensores.
 
 ---
 
 ## Especificaciones Técnicas
 
-* **Alimentación:** Batería recargable 18650 con módulo de carga / Operación lógica a 5 V (puerto USB 5 V en modo depuración).
-* **Consumo:** Bajo consumo intermitente (operación breve solo durante los segundos de medición, con disipación térmica pasiva). *(Nota: Si midieron los mA exactos con tester, agrégalos aquí).*
-* **Dimensiones:** 70 mm × 120 mm × 270 mm (7 cm de largo × 12 cm de ancho × 27 cm de alto).
-* **Peso:** *(Completar con el peso exacto en gramos del prototipo ensamblado con batería).*
+* **Alimentación:** Batería recargable Li-ion 18650 (3,7 V) con módulo cargador TP4056 (5 V, 1 A) / Operación lógica a 5 V (puerto USB en modo depuración y transmisión IoT).
+* **Consumo:** Bajo consumo energético optimizado para operación intermitente en terreno (encendido breve durante la medición, con disipación térmica pasiva sin rejillas).
+* **Dimensiones:** 52 mm × 100 mm × 253 mm (largo × ancho × alto).
+* **Peso carcasa PLA:** 197 g de filamento PLA (más peso de componentes electrónicos internos).
+* **Costo total de materiales (BOM):** $40.876 CLP.
+
+---
+
+## Mapa de Conexiones (Pinout)
+
+| Componente | Pin Arduino Uno | Función / Protocolo |
+| :--- | :--- | :--- |
+| **Sensor Temperatura (DS18B20)** | `D2` | Señal Digital 1-Wire (con resistencia pull-up de `4,7 kΩ`) |
+| **Interruptor SPDT** | `D3` | Entrada Digital con resistencia interna (`INPUT_PULLUP`) |
+| **LED Verde (Agua Apta)** | `D8` | Salida Digital (`HIGH` cuando cumple los 3 parámetros, con R de `220 Ω`) |
+| **LED Rojo (Agua No Apta)** | `D9` | Salida Digital (`HIGH` si falla al menos 1 parámetro, con R de `220 Ω`) |
+| **Sensor TDS V1.0** | `A0` | Lectura Analógica (Sólidos disueltos en ppm) |
+| **Sensor Turbidez (TSW-20M)** | `A1` | Lectura Analógica (Nivel de turbidez en NTU) |
+
+---
+
+## Umbrales Operativos y Ecosistema IoT
+
+El hardware está calibrado bajo los estándares operativos de las pastillas potabilizadoras **AquaTabs** y normativa **EPA / OMS**:
+
+* **Temperatura mínima (> 10 °C):** Evita la ralentización severa de la desinfección química por frío.
+* **Turbidez máxima (< 5 NTU):** Exigencia del fabricante de AquaTabs para evitar que partículas suspendidas escuden microorganismos.
+* **Sólidos Disueltos Totales (< 500 ppm):** Estándar secundario (SMCL) de EPA/OMS para palatabilidad y dureza del agua.
+* **Conectividad Cloud:** Al conectarse vía USB a un computador, un script en **Python** lee el puerto serial y transmite los registros en tiempo real al dashboard público en **ThingSpeak**: [Ver Canal ThingSpeak](https://thingspeak.mathworks.com/channels/3588837).
 
 ---
 
@@ -54,17 +79,6 @@ Esta carpeta contiene toda la documentación técnica del hardware del proyecto 
 
 | Problema | Posible Causa | Solución |
 | :--- | :--- | :--- |
-| El traspaso de agua hacia la electrónica superior | El agua sube al sumergir el dispositivo debido a la presión hidrostática y al desplazamiento de volumen (principio de Arquímedes). | Impermeabilizar la tapa superior con sello de goma y sellar la ranura interna por donde pasan los cables hacia los sensores. |
-| Lecturas erráticas o con burbujas en los sensores | Aire atrapado dentro de la falda protectora inferior al sumergir el equipo verticalmente. | Mantener libre el orificio de ventilación lateral en la sección inferior para permitir el escape del aire y el baño completo de los sensores. |
-| Fluctuación o ruido en los valores de TDS y Turbidez | Variaciones instantáneas de voltaje en las lecturas analógicas crudas (`V_TDS` y `V_TURB`). | Aplicar el filtro de estabilización en el código (promedio de 10 lecturas consecutivas por ciclo) y calibrar previamente con agua de la llave. |
-
-## Umbrales Operativos y Calibración
-
-El hardware está calibrado específicamente para validar la efectividad de pastillas potabilizadoras **AquaTabs**:
-
-* **Temperatura mínima (> 10 °C):** Por debajo de este umbral, el frío ralentiza severamente la acción química del cloro (duplicando el tiempo de contacto necesario por cada 10 °C bajo los 15 °C), activando la alerta roja.
-* **Turbidez máxima (< 5 NTU):** Exigencia oficial del fabricante de AquaTabs para evitar que partículas suspendidas protejan a los microorganismos de la desinfección.
-* **Sólidos Disueltos Totales (< 500 ppm):** Basado en el estándar secundario (SMCL) de la EPA y la OMS para asegurar palatabilidad y evitar exceso de minerales o sabor salobre.
-
-
----
+| Traspaso de agua hacia la electrónica superior | El agua asciende al sumergir el dispositivo debido a la presión hidrostática y al desplazamiento de volumen (principio de Arquímedes). | Asegurar el ajuste de la tapa superior removible y reforzar el sellado de la ranura interna de cables con cinta americana resistente a la humedad. |
+| Lecturas erráticas o burbujas en los sensores | Aire atrapado dentro de la cámara inferior abierta al sumergir el equipo verticalmente. | Mantener despejado el orificio lateral de ventilación en el faldón inferior para permitir el escape del aire y el baño completo de los sensores. |
+| Fluctuación o ruido en lecturas analógicas (`V_TDS`, `V_TURB`) | Variaciones instantáneas de voltaje en los conversores ADC. | Aplicar el filtro de estabilización en firmware (promedio móvil de 10 lecturas consecutivas por ciclo) y calibrar con muestras de control. |
