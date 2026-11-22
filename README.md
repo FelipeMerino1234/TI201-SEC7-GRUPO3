@@ -15,8 +15,8 @@ El Monitor de calidad del agua es un prototipo basado en Arduino diseñado para 
 
 
 ### Estado del Proyecto
-- **Versión actual:** v2.0
-- **Última actualización:** 25/10/26
+- **Versión actual:** v3.0
+- **Última actualización:** 22/11/26
 - **Estado:** Prototipo 
 
 ---
