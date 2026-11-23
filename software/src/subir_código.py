@@ -3,9 +3,9 @@ import requests
 import serial
 
 # --- CONFIGURACIÓN ---
-PUERTO_ARDUINO = "COM5"
+PUERTO_ARDUINO = "PuertoCOM"
 BAUDIOS = 9600
-WRITE_API_KEY = "AHB5NFVAGEC8RN9L"
+WRITE_API_KEY = "Insertar Acá Apikey del ThingSkeap"
 URL_THINGSPEAK = "https://api.thingspeak.com/update"
 
 print(f"Conectando a {PUERTO_ARDUINO}...")
