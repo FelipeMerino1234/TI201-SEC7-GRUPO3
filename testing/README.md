@@ -10,7 +10,7 @@ Esta carpeta documenta los protocolos de prueba, los resultados experimentales y
   Registros cuantitativos obtenidos desde el Monitor Serial, exportación CSV de la memoria interna EEPROM y respaldos descargados desde el historial en la nube de **ThingSpeak**.
 
 * `evidencia/`  
-  Capturas de pantalla de las gráficas evolutivas, indicadores de umbral (*gauges*) en ThingSpeak, ejecución del script `subir_eva.py` y fotografías de las pruebas en laboratorio.
+  Capturas de pantalla de las gráficas evolutivas, indicadores de umbral (*gauges*) en ThingSpeak, ejecución del script `subir_datos.py` y fotografías de las pruebas en laboratorio.
 
 ---
 
