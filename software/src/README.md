@@ -161,32 +161,4 @@ python "subir_código.py"
 
 El programa solicita el historial mediante `L` y trata de enviarlo a ThingSpeak. **No iniciar la carga con una clave expuesta o revocada.** La ejecución requiere una clave válida configurada de forma segura y acceso a Internet.
 
-## 7. Evidencia de pruebas del proyecto
 
-En las capturas entregadas por el equipo el **22/11/2026**, se observan mediciones de dos muestras y mensajes de envío a ThingSpeak:
-
-| Registro puntual | Muestra A: agua de la llave | Muestra B: agua fría con sal |
-|---|---:|---:|
-| Temperatura | 21,81 °C | 5,88 °C |
-| TDS | 250,10 ppm | 892,33 ppm |
-| Turbidez | 0,00 NTU | 403,06 NTU |
-| Evaluación que resulta de los umbrales del firmware | LED verde | LED rojo |
-| ID informado por consola de subida | 1 | 2 |
-
-Son **lecturas puntuales**, no promedios de la prueba completa. Las fotografías muestran asimismo mensajes de guardado en EEPROM. **FALTA** evidencia audiovisual suficiente para confirmar el estado físico de cada LED durante ambas capturas; no se atribuye una tasa de clasificación perfecta a sólo dos registros.
-
-Los resultados de las pruebas y la encuesta pre-test de 46 participantes se documentan en las carpetas `testing/` y `docs/` del repositorio.
-
-## 8. Limitaciones y pendientes
-
-- **FALTA** verificar compilación y carga del firmware en el entorno final de entrega.
-- **FALTA** medir tiempos efectivos de cada ciclo, respuesta LED y latencia de subida.
-- **FALTA** calibración independiente con patrones y estimación de incertidumbre de TDS/turbidez.
-- **FALTA** confirmar correspondencia entre `subir_código.py` y el `subir_eva.py` de las capturas.
-- **FALTA** migrar y revocar/regenerar la credencial de ThingSpeak expuesta en GitHub.
-- **FALTA** confirmar en un registro completo las marcas de tiempo y la recepción de todas las muestras enviadas.
-- **FALTA** validación microbiológica o de eficacia de potabilización, fuera del alcance de los tres sensores actuales.
-
-## 9. Integridad y procedencia
-
-Este documento describe la implementación **presente en los archivos de `software/src/`**, contrastada con las secciones de documentación técnica, IoT y validación del **Avance 3**, así como las capturas del 22/11/2026. Las funciones o archivos no comprobados se identifican expresamente como **FALTA**. Las referencias técnicas y la declaración de uso de herramientas externas e IA se encuentran en [`../../FUENTES.md`](../../FUENTES.md).
