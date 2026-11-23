@@ -10,7 +10,9 @@ Esta carpeta documenta los protocolos de prueba, los resultados experimentales y
   Registros cuantitativos obtenidos desde el Monitor Serial, exportación CSV de la memoria interna EEPROM y respaldos descargados desde el historial en la nube de **ThingSpeak**.
 
 * `evidencia/`  
-  Capturas de pantalla de las gráficas evolutivas, indicadores de umbral (*gauges*) en ThingSpeak, ejecución del script `subir_datos.py` y fotografías de las pruebas en laboratorio.
+  Capturas de pantalla de las gráficas evolutivas, indicadores de umbral (*gauges*) en ThingSpeak, ejecución del script
+
+*`subir_datos.py` y fotografías de las pruebas en laboratorio.
 
 ---
 
@@ -26,7 +28,7 @@ Validar el funcionamiento integral del prototipo, verificando la adquisición co
 ### Procedimiento de Ejecución
 1. Encender el sistema mediante el interruptor lateral SPDT, conectar el prototipo al computador vía USB y abrir el Monitor Serial a 9600 baudios para verificar el inicio de la captura continua (filtro de promedio móvil de 10 lecturas por ciclo).
 2. Sumergir la cámara inferior de sensores en la **Muestra A** durante 2 minutos, verificando el escape de aire por el orificio lateral, la estabilización de los valores en el Monitor Serial, el encendido del **LED Verde** y el guardado automático de la muestra en la memoria **EEPROM**.
-3. Ejecutar el script de Python (`subir_datos.py`) para leer el registro serial de la EEPROM y transmitirlo a ThingSpeak, verificando su aparición en las gráficas históricas y en la zona verde de los *gauges*.
+3. Ejecutar el script de Python (`subir_codigo.py`) para leer el registro serial de la EEPROM y transmitirlo a ThingSpeak, verificando su aparición en las gráficas históricas y en la zona verde de los *gauges*.
 4. Enjuagar y secar los sensores, luego sumergirlos en la **Muestra B** durante 2 minutos, verificando la caída de temperatura, el aumento de TDS y turbidez, el cambio inmediato al **LED Rojo** y, tras ejecutar nuevamente el script de sincronización, el desplazamiento de los *gauges* hacia la zona roja de alerta en ThingSpeak.
 
 ### Criterios de Éxito
