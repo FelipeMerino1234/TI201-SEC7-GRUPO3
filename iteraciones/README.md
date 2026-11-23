@@ -4,7 +4,6 @@
 
 Esta carpeta documenta la evolución del prototipo **Monitor de Calidad del Agua** a través de las diferentes versiones desarrolladas durante el curso.
 
-**CRÍTICO:** Demostrar el proceso iterativo es un requisito para obtener puntaje completo en "Integración y Refinamiento" (2.5 puntos).
 
 ---
 
@@ -18,19 +17,6 @@ iteraciones/
 ├── iteracion_2/   # Primera iteración - Prototipo físico en protoboard y modelo CAD base (Avance #2 - 25/10/2026)
 └── iteracion_3/   # Versión final - Gemelo 3D, EasyEDA, IoT ThingSpeak y validación final (Avance #3 - 22/11/2026)
 ```
-
----
-
-## Contenido de Cada Iteración
-
-Cada carpeta debe incluir:
-
-1. **README.md** - Descripción de la versión
-2. **Fotos** - Imágenes del prototipo en ese estado
-3. **Esquema** - Circuito de esa versión (si cambió)
-4. **Código** - Versión del software (si cambió)
-5. **Notas** - Problemas identificados y mejoras planificadas
-
 ---
 
 ## Tabla Comparativa de Iteraciones
