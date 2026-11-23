@@ -1,12 +1,5 @@
 # Documentación de Software
 
-## Contenido
-
-### Diagramas de Flujo
-Incluir diagramas de las funciones principales del sistema y de la arquitectura IoT (Adquisición -> Procesamiento en Arduino -> Gateway Python -> Nube ThingSpeak).
-
-* **Formato:** PNG, PDF o draw.io (`arquitectura_iot.png`, `flujo_firmware.png`).
-
 ---
 
 ### Documentación de Funciones
