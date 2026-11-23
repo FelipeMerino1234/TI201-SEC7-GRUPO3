@@ -1,10 +1,7 @@
 # Código fuente — Monitor de Calidad del Agua (M.C.A. / Sistema E.V.A.)
 
-**Curso:** TEI201 · Sección 7 · Grupo 3 · Universidad Adolfo Ibáñez  
-**Plataforma:** Arduino Uno (ATmega328P) y computador con Python 3  
-**Propósito:** adquisición de temperatura, sólidos disueltos totales (TDS) y turbidez; clasificación local mediante LED; conservación de registros en EEPROM y transferencia posterior a ThingSpeak.
 
-> **Alcance:** el sistema verifica tres **umbrales definidos en el prototipo**, pero **no certifica que el agua sea potable**, no detecta microorganismos y no demuestra por sí solo la eficacia de las pastillas potabilizadoras. Deben seguirse las instrucciones del fabricante y los procedimientos sanitarios aplicables.
+##Alcance: el sistema verifica tres **umbrales definidos en el prototipo**, pero **no certifica que el agua sea potable**, no detecta microorganismos y no demuestra por sí solo la eficacia de las pastillas potabilizadoras. Deben seguirse las instrucciones del fabricante y los procedimientos sanitarios aplicables.
 
 ## 1. Archivos de esta carpeta
 
