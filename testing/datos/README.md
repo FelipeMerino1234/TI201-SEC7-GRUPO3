@@ -101,5 +101,4 @@ Porcentaje que desconoce factores inhibidores: 65,2% (28,3% no está seguro)
 
 ## Visualización de Datos
 
-iva)
 
