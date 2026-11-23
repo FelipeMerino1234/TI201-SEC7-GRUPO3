@@ -45,7 +45,7 @@ Primera versión del prototipo (**Detector de Potabilidad del Agua**), enfocada 
 Incluir en esta carpeta:
 * `v1_boceto_conceptual.jpg` - Boceto inicial del dispositivo dividido en cámara electrónica superior y faldón inferior
 * `v1_simulacion_wokwi.png` - Captura del circuito virtual en Wokwi (`M.C.A`) con potenciómetros y LEDs
-* `v1_encuesta_validacion.png` - Resultados gráficos de la encuesta pre-test realizada a 46 excursionistas
+
 
 ---
 
