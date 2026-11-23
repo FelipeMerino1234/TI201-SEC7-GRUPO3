@@ -101,4 +101,21 @@ Porcentaje que desconoce factores inhibidores: 65,2% (28,3% no está seguro)
 
 ## Visualización de Datos
 
+A continuación se presentan los gráficos de validación del pre-test con usuarios (`N = 46` excursionistas)[cite: 55, 56, 57]:
+
+### 1. Perfil de los Usuarios y Uso de Pastillas Potabilizadoras
+![Frecuencia de actividades outdoor y uso previo de pastillas](Foto1.png)
+* El 50% de los encuestados realiza actividades de senderismo y montañismo de forma ocasional, mientras que el 78,3% ha recurrido previamente al uso de pastillas potabilizadoras en sus rutas de montaña[cite: 56].
+
+### 2. Confianza y Capacidad Percibida en la Evaluación del Agua
+![Percepción de seguridad y capacidad para evaluar fuentes de agua](Foto2.png)
+* Los usuarios reflejan una baja seguridad (`2,67 / 5,0`) y una baja capacidad autopercibida (`2,11 / 5,0`) para determinar de manera empírica si una fuente de agua natural es apta para ser tratada[cite: 52, 57].
+
+### 3. Confiabilidad Visual vs. Conocimiento de Factores Inhibidores
+![Confiabilidad de evaluación visual y conocimiento de factores críticos](Foto3.png)
+* Un 65,2% de los encuestados desconoce que factores físicos críticos como la baja temperatura (`< 10 °C`) o la turbidez (`> 5 NTU`) pueden inhibir el funcionamiento de la desinfección química[cite: 31, 32, 55]. Asimismo, más del 65% reconoce la ineficacia de evaluar el agua únicamente mediante inspección visual (notas 1 y 2)[cite: 55].
+
+**Herramientas utilizadas:**
+* ThingSpeak IoT Analytics (exportación directa `feeds.csv`)[cite: 54]
+* Google Forms / Excel (análisis de encuesta y estadística descriptiva)
 
