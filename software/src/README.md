@@ -8,7 +8,7 @@
 | Archivo | Función | Estado |
 |---|---|---|
 | [`Codigo_Arduino_V3.ino`](Codigo_Arduino_V3.ino) | Firmware principal del Arduino Uno: sensores, cálculos, LEDs, comunicación serial y EEPROM. | Disponible |
-| [`subir_código.py`](subir_código.py) | Programa Python que solicita al Arduino las mediciones guardadas en EEPROM y las transmite al canal ThingSpeak. | Disponible; **requiere corregir exposición de clave de API** |
+| [`subir_código.py`](subir_código.py) | Programa Python que solicita al Arduino las mediciones guardadas en EEPROM y las transmite al canal ThingSpeak. | Disponible; **requiere corregir exposición de clave de API y puerto COM** |
 | [`Codigo_Arduino_V2.ipynb`](Codigo_Arduino_V2.ipynb) | Registro de una versión anterior del código Arduino, conservado como evidencia de iteración. | Disponible; contiene código C/C++ en una libreta con kernel Python y **no se ejecuta como notebook Python** |
 | `README.md` | Explicación técnica, instalación, uso, resultados, limitaciones y pendientes. | Este documento |
 
