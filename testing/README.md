@@ -2,7 +2,7 @@
 
 ## Contenido
 
-Esta carpeta documenta los protocolos de prueba, los resultados experimentales y la validación con usuarios del proyecto **Monitor de Calidad del Agua (Sistema E.V.A.)**.
+Esta carpeta documenta los protocolos de prueba, los resultados experimentales y la validación con usuarios del proyecto **Monitor de Calidad del Agua**.
 
 ### Carpetas
 
