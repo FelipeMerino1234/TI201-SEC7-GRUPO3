@@ -12,7 +12,7 @@ Esta carpeta documenta los protocolos de prueba, los resultados experimentales y
 * `evidencia/`  
   Capturas de pantalla de las gráficas evolutivas, indicadores de umbral (*gauges*) en ThingSpeak, ejecución del script
 
-*`subir_datos.py` y fotografías de las pruebas en laboratorio.
+* `subir_codigo.py` y fotografías de las pruebas en laboratorio.
 
 ---
 
