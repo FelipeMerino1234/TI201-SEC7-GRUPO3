@@ -53,8 +53,8 @@ Listar parámetros principales utilizados:
 
 | Versión | Fecha | Cambios Principales |
 |---------|-------|---------------------|
-| v3.0 | [Fecha] | Versión final para Avance #3 |
-| v2.1 | [Fecha] | Ajustes post Avance #2 |
-| v1.0 | [Fecha] | Primera versión funcional |
+| v3.0 | [Fecha] | Versión final retroalimentada Avance #3 |
+| v2.1 | [Fecha] | Avance #2 |
+| v1.0 | 29/08/26 | Dibujo Referencial |
 
 ---
