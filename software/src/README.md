@@ -143,7 +143,7 @@ La versión de `subir_código.py` revisada contiene una **clave de escritura de 
 4. Verificar/compilar y cargar el firmware a la placa.
 5. Para observar lecturas, abrir el **Monitor Serial a 9600 baudios**.
 
-No se ha realizado en esta revisión una compilación física sobre la placa: **FALTA** adjuntar, si se exige, captura de compilación/carga exitosa.
+
 
 ### 6.2 Python y envío de registros
 
@@ -153,7 +153,7 @@ Instalar dependencias en el computador:
 python -m pip install pyserial requests
 ```
 
-Antes de ejecutar, revisar en el archivo `subir_código.py` el puerto serial y **corregir la gestión de la API key** descrita arriba. Cerrar el Monitor Serial de Arduino IDE para liberar el puerto. En Windows, desde la carpeta `software/src/`, la instrucción usada es:
+Antes de ejecutar, revisar en el archivo `subir_código.py` el puerto serial y **corregir la gestión de la API key y puerto COM** descrita arriba. Cerrar el Monitor Serial de Arduino IDE para liberar el puerto. En Windows, desde la carpeta `software/src/`, la instrucción usada es:
 
 ```bash
 python "subir_código.py"
