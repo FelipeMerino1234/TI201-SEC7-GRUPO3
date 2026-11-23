@@ -2,7 +2,7 @@
 
 ## Contenido
 
-Esta carpeta contiene toda la documentación técnica del hardware del proyecto **Monitor de Calidad del Agua (Sistema E.V.A.)**.
+Esta carpeta contiene toda la documentación técnica del hardware del proyecto **Monitor de Calidad del Agua**.
 
 ### 📁 Carpetas
 
