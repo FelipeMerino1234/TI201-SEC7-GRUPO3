@@ -2,7 +2,7 @@
 
 ## Contenido
 
-Esta carpeta contiene todo el código y documentación del software del proyecto **Monitor de Calidad del Agua (Sistema E.V.A.)**.
+Esta carpeta contiene todo el código y documentación del software del proyecto **Monitor de Calidad del Agua**.
 
 ### Carpetas
 
