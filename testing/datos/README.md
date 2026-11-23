@@ -101,14 +101,3 @@ Porcentaje que desconoce factores inhibidores: 65,2% (28,3% no está seguro)
 
 ## Visualización de Datos
 
-Incluir gráficos y capturas generadas (exportadas desde Google Forms, Excel y ThingSpeak como PNG):
-
-* `grafico_encuesta_factores.png` - Distribución de conocimiento sobre factores inhibidores de pastillas (65,2% desconoce)
-* `grafico_utilidad_prototipo.png` - Valoración de utilidad del dispositivo (promedio 4,07 / 5,0)
-* `grafico_thingspeak_curvas.png` - Evolución temporal de Temperatura (`field1`), TDS (`field2`) y Turbidez (`field3`)
-* `grafico_thingspeak_gauges.png` - Indicadores de umbral en zona verde (Muestra A) y zona roja (Muestra B)
-
-**Herramientas utilizadas:**
-* ThingSpeak IoT Analytics (exportación directa `feeds.csv`)
-* Google Forms / Excel (estadística descriptiva y gráficos de encuesta)
-* R / RStudio (disponible para análisis complementario)
