@@ -64,4 +64,4 @@ Validar el funcionamiento integral del prototipo, verificando la adquisición co
 
 * **Latencia local (LEDs):** Respuesta inmediata por ciclo de promediado (10 lecturas consecutivas).
 * **Persistencia local (EEPROM):** Guardado automático tras 5 segundos de estabilización (capacidad de hasta 85 muestras).
-* **Latencia cloud (ThingSpeak):** Sincronización mediante `sub
+* **Latencia cloud (ThingSpeak):** Sincronización mediante `sub`
