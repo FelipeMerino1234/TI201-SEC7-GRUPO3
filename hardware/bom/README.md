@@ -1,5 +1,4 @@
 # Bill of Materials (BOM)
-Se transcribieron las **13 partidas** del Avance 3 en [`bom_avance3.csv`](bom_avance3.csv), sin inventar marcas ni proveedores.
 
 **Total declarado por el informe:** $40.876 CLP.
 
