@@ -2,7 +2,7 @@
 
 ## Propósito
 
-Esta carpeta documenta la evolución del prototipo **Monitor de Calidad del Agua (Sistema E.V.A.)** a través de las diferentes versiones desarrolladas durante el curso.
+Esta carpeta documenta la evolución del prototipo **Monitor de Calidad del Agua** a través de las diferentes versiones desarrolladas durante el curso.
 
 **CRÍTICO:** Demostrar el proceso iterativo es un requisito para obtener puntaje completo en "Integración y Refinamiento" (2.5 puntos).
 
