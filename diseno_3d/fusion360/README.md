@@ -1,51 +1,31 @@
 # Archivos Fusion 360
-
-## Archivos Requeridos
-
-### `modelo_completo_v3.f3d`
-Archivo principal con **historial de cambios completo**
-
-**DEBE INCLUIR:**
--  Todos los componentes modelados
--  Ensamble completo funcional
--  Historial de diseño (timeline)
--  Materiales asignados
--  Constraints y relaciones
-
----
-
 ## Estructura del Modelo
 
 ### Componentes (Components)
 ```
 Ensamble_Principal
-├── Encapsulado_Inferior
-├── Encapsulado_Superior
-├── ESP32_DevKit
-├── Sensor_DHT22
-├── LED_Indicador
-├── Soporte_Bateria
-├── Bracket_Montaje
-└── Tornilleria
+├── 11_Carcasa_inferior:1
+├──21_Carcasa_media:1
+├──31_Carcasa_superior:1
+├──41_Pared_deslizable:1
+├──51_Tapa_superior:1
+├──Arduino_UNO:1
+├──Protoboard_400:1
+├──Portapila_18650:1
+├──Bateria_18650:1
+├──Interruptor_palanca:1
+├──LED_rojo:1
+├──LED_verde:1
+├──Sensor_TDS:1
+├──Sensor_turbidez:1
+├──Sensor_temperatura_DS18B20:1
+├──Resistencias:1
 ```
-
-### Uniones (Joints)
-Documentar las juntas principales y sus restricciones
-
 ### Parámetros
 Listar parámetros principales utilizados:
-- `ancho_total = 120mm`
-- `alto_total = 80mm`
-- `grosor_pared = 2mm`
-
----
-
-## Instrucciones de Apertura
-
-1. Abrir Fusion 360
-2. File > Open > Seleccionar archivo `.f3d`
-3. Verificar que todas las referencias están cargadas
-4. Revisar timeline para ver historial
+- `largo 52 mm `
+- `ancho 100 mm`
+- `alto  253 mm`
 
 ---
 
@@ -53,8 +33,8 @@ Listar parámetros principales utilizados:
 
 | Versión | Fecha | Cambios Principales |
 |---------|-------|---------------------|
-| v3.0 | 25/10/26 | Versión final retroalimentada Avance #3 |
-| v2.1 | 25/10/26 | Avance #2 |
-| v1.0 | 29/08/26 | Dibujo Referencial |
+| v3.0 | 25/10/26 | Diseño_V3 |
+| v2.1 | 25/10/26 | Diseño_V2 |
+| v1.0 | 29/08/26 | Dibujo_Idea_Original |
 
 ---
